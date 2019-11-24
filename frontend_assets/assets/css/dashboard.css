@@ -1,0 +1,12 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900');
+body {
+  background-color: #eee;
+  font-family: 'Raleway', sans-serif;
+}
+
+
