@@ -3,10 +3,6 @@
 
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-
-
-
-
             <h1 class="heading">Dashboard</h1>
 
             <section class="row text-center placeholders" id="">
@@ -22,28 +18,12 @@
                     $account = $instagram_api->getAccount($username);
                     $is_private = $account->isPrivate();
 
-                    /*$context = stream_context_create(array('http' => array('header' => 'Connection: close\r\n')));
-                    $response = @file_get_contents("https://www.instagram.com/$username/?__a=1", false, $context);*/
-
-
-                    //echo '<pre>'; print_r($account); echo '</pre>'; exit;
-
                     if($is_private != 1) {
-
-                       /* $data = json_decode($response, true);
-                        if($data !== null) {
-                            $profile_pic_url = $data['graphql']['user']['profile_pic_url'];
-                            $total_posts = $data['graphql']['user']['edge_owner_to_timeline_media']['count'];
-                            $following = $data['graphql']['user']['edge_follow']['count'];
-                            $followers = $data['graphql']['user']['edge_followed_by']['count'];
-                        }*/
 
                         $profile_pic_url = $account->getProfilePicUrl();
                         $total_posts = $account->getMediaCount();
                         $following = $account->getFollowsCount();
                         $followers = $account->getFollowedByCount();
-
-
 
                         ?>
 
@@ -80,7 +60,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <!-- package detail Modal -->
                         <div class="modal fade" id="package_model_<?php echo $user_data['order_id']; ?>" tabindex="-1"
@@ -179,10 +158,8 @@
                                                             </li>
                                                         <?php } ?>
 
-
                                                     </ul>
                                                 </div>
-
 
                                             </div>
                                         </div>
@@ -241,8 +218,6 @@
                                     <a href="<?php echo base_url() . 'dashboard/view_posts/' . $user_data['order_id']; ?>"
                                        style="color: #0b93d5; font-size: 14px; font-weight: bold; text-align: center;">Edit
                                         Posts</a>
-                                    <!--                            <a href="#" data-toggle="modal" data-target="#package_model_-->
-                                    <?php //echo $user_data['order_id'];?><!--" style="color: #0b93d5; font-size: 14px; font-weight: bold; text-align: right; padding-right: 10px;">Package Detail</a>-->
                                 </div>
 
                                 <a href="#" class="edit-btn edit-btn-posts" data-toggle="modal"
@@ -261,7 +236,6 @@
                             <div class='package-box animated swing'>
                                 <div class="body-content">
                                     <p align="center" style="font-size: 14px; font-weight: bold ">
-<!--                                        <span style="color: #ff0002; font-size: 16px"> --><?php //echo $user_data['instagram_name']; ?><!-- </span> <br>  <br> Account is not available. <br> Please verify your Phone Number on Instagram.-->
                                         <span style="color: #ff0002; font-size: 16px"> <?php echo $user_data['instagram_name']; ?> </span> <br>  <br> This Account is Private. <br> Please change your account status to use this resource.
                                     </p>
 
@@ -274,10 +248,7 @@
                     <?php  }
                     ?>
 
-
-
                 <?php } ?>
-
 
                 <div class="col-lg-3 col-sm-4">
 

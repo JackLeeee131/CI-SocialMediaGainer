@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -40,7 +35,6 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Add Payment Info</h3>
                         </div>
-
 
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -98,7 +92,6 @@
                             </div>
 
 
-
                             <!-- /.box-body -->
                             <div class="box-footer">
                                 <input type="submit" class="btn btn-info pull-right" value="Save">
@@ -125,7 +118,6 @@
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
 
-
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Payment Method</th>
@@ -134,8 +126,6 @@
                                     <th>Message</th>
                                     <th>Edit</th>
                                 </tr>
-
-
 
                                 <?php  $i = 1; foreach($payment_detail as $payment) { ?>
 

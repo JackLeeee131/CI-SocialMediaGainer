@@ -2,13 +2,6 @@
 
 <body>
 
-
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -58,7 +51,6 @@
                         <?php echo form_close(); ?>
 
 
-
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
@@ -70,8 +62,6 @@
 
     </div>
 </div>
-
-
 
 
 </body>

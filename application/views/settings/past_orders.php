@@ -1,72 +1,17 @@
 
-
-
-
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="container-fluid">
 
     <div class="row">
 
-
-
-
-
         <main role="main" class="right-section">
-
-
 
             <h1 class="heading">Past Orders</h1>
 
-
-
             <section class="row placeholders">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="col-lg-12 col-sm-12">
-
-
-
-
 
                     <?php if($this->session->flashdata('error_message')){ ?>
 
@@ -92,23 +37,11 @@
 
                     <?php }?>
 
-
-
-
-
-
-
                     <div class="boxstyle">
-
-
 
                         <div class="box-body table-responsive">
 
                             <table class="table table-bordered table-hover">
-
-
-
-
 
                                 <tr>
 
@@ -126,21 +59,9 @@
 
                                     <th>Order Status</th>
 
-
-
                                 </tr>
 
-
-
-
-
-
-
                                 <?php  $i = 1; foreach($past_orders_detail as $custom_order) { ?>
-
-
-
-
 
                                     <tr>
 
@@ -158,53 +79,28 @@
 
                                         <td><?php echo $custom_order['order_status']; ?></td>
 
-
-
                                     </tr>
-
-
-
-
 
                                 <?php } ?>
 
                                 <?php if(count($past_orders_detail) == 0) { ?>
 
-
-
                                     <tr><td colspan="7" style="text-align: center; color: #ff0002"> <b> No Order Found </b></td></tr>
 
-
-
                                 <?php } ?>
-
-
 
                             </table>
 
                         </div>
 
 
-
                     </div>
-
-
-
-
-
-
 
                 </div>
 
             </section>
 
-
-
-
-
         </main>
-
-
 
         <!-- checkout Modal -->
 
@@ -269,9 +165,6 @@
 </div>
 
 
-
-
-
 <script>
 
     function copy_ref() {
@@ -291,8 +184,6 @@
     });
 
 </script>
-
-
 
 
 

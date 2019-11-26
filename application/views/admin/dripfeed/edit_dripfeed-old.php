@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -132,9 +127,6 @@
                             </div>
 
                         </div>
-
-
-
                             <!-- /.box-body -->
                             <div class="box-footer">
                                 <input type="submit" class="btn btn-info pull-right" value="Update">
@@ -149,7 +141,6 @@
                 <div class="col-md-2"> </div>
 
             </div>
-
 
         </section>
         <!-- /.content -->

@@ -7,10 +7,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 
-
-
-
-
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -107,8 +103,6 @@
                                 </div>
                             </div>
 
-
-
                             <div class="form-group">
                                 <label for="" class="col-sm-3 control-label">Dripfeed Price</label>
                                 <div class="col-sm-6">
@@ -117,8 +111,6 @@
                             </div>
 
                         </div>
-
-
 
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -135,7 +127,6 @@
 
             </div>
 
-
         </section>
         <!-- /.content -->
     </div>
@@ -148,8 +139,6 @@
 <script src="<?php echo base_url();?>assets/jquery.validate.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/validate_forms.js"></script>
 <script>
-
-
     $(document).ready(function () {
         var dripfeed_for = $('#dripfeed_for').val();
         if(dripfeed_for == "followers") {

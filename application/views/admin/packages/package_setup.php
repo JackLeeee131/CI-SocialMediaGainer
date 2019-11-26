@@ -4,10 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -30,10 +27,7 @@
 
             <div class="row">
 
-
                 <div class="col-md-1"> </div>
-
-
 
                 <!-- center column -->
                 <div class="col-md-10">
@@ -61,15 +55,10 @@
                        <?php $attributes = array('class' => 'form-horizontal', 'id' => 'package_setup');
                         echo form_open('admin/package_setup/update_package_setup', $attributes); ?>
 
-
-
                         <div class="box-body">
 
                             <div class="form-group box-header with-border">
                                 <label for="" class="col-sm-2 control-label">Likes:</label>
-
-
-
 
                                 <div class="col-sm-3">
                                     <label for="" class="col-sm-2 control-label">Min</label>
@@ -157,14 +146,8 @@
                                 </div>
                             </div>
 
-
-
-
-
                         </div>
                         <!-- /.box-body -->
-
-
 
                         <div class="box-footer">
                             <input type="submit" class="btn btn-info pull-right" value="Update">
@@ -173,18 +156,11 @@
                         <?php echo form_close(); ?>
                     </div>
 
-
                     <!-- /.box -->
                 </div>
-
-
                 <div class="col-md-1"> </div>
 
             </div>
-
-
-
-
 
             <div class="row">
 
@@ -253,8 +229,6 @@
                                     </div>
                                 </div>
 
-
-
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-3 control-label"> Discount</label>
                                     <div class="col-sm-4">
@@ -262,15 +236,10 @@
                                     </div>
                                 </div>
 
-
                             </div>
-
-
 
                         </div>
                         <!-- /.box-body -->
-
-
 
                         <div class="box-footer">
                             <input type="submit" class="btn btn-info pull-right" value="Add">
@@ -278,22 +247,12 @@
                         <!-- /.box-footer -->
                         <?php echo form_close(); ?>
                     </div>
-
-
                     <!-- /.box -->
                 </div>
-
 
                 <div class="col-md-1"> </div>
 
             </div>
-
-
-
-
-
-
-
 
             <div class="row">
                 <div class="col-md-12">
@@ -305,7 +264,6 @@
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
 
-
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Range For</th>
@@ -313,14 +271,9 @@
                                     <th>Range To</th>
                                     <th>Discount</th>
                                     <th>Delete</th>
-
                                 </tr>
 
-
-
                                 <?php  $i = 1; foreach($range_setup as $range) { ?>
-
-
                                     <tr>
                                         <td><?php echo $i++; ?></td>
                                         <td><?php echo $range['range_name']; ?></td>
@@ -329,9 +282,7 @@
                                         <td><?php echo $range['range_discount']; ?></td>
                                         <td><a href="<?php echo base_url().'admin/package_setup/delete_customOrder_range/'.$range['range_id']; ?>"> Delete </a> </td>
                                     </tr>
-
                                 <?php } ?>
-
                             </table>
                         </div>
                         <!-- /.box-body -->

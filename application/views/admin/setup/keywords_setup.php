@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -135,8 +130,6 @@
                                     <th>Edit</th>
                                 </tr>
 
-
-
                                 <?php  $i = 1; foreach($website_keywords_detail as $keywords) { ?>
 
 
@@ -159,8 +152,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-
-
 
         </section>
         <!-- /.content -->

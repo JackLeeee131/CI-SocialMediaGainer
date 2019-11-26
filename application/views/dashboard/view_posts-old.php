@@ -2,14 +2,6 @@
 
 <body>
 
-
-
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -42,8 +34,6 @@
                             $likes = $media->getLikesCount();
                             $comments = $media->getCommentsCount();
                             $post_type = $media->getType();
-                            //echo $post_code;
-                    //echo '<pre>'; print_r($medias); echo '</pre>'; exit;
 
                     $post_detail = $this->common_model->get_table_data('tbl_posts', '*',array('tbl_order_id' => $order_id, 'post_code' => $post_code), $row=1);
                     $sum_qry = $this->common_model->get_table_data('tbl_posts','SUM(post_likes) AS post_likes, SUM(post_views) AS post_views, SUM(post_comments) AS post_comments, SUM(post_followers) AS post_followers ',array('tbl_order_id' => $order_id), $row=1);
@@ -62,27 +52,6 @@
                     }
 
                     ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                     <!-- edit posts -->
                     <div class="modal fade" id="edit_post_model_<?php echo $post_code; ?>" tabindex="-1" role="dialog"
@@ -135,20 +104,6 @@
                                     </div>
                                     <?php } ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                     <?php if(!empty($sub_package_detail[0]['comments'])) { ?>
                                     <div class="form-row align-items-center">
                                         <div class="col-lg-3 col-sm-3">
@@ -161,9 +116,6 @@
                                             <label><span style="color: #ff0002; font-weight: bold"><?php echo $comments_remaining;?> </span> Comments Remaining</label>
                                         </div>
                                     </div>
-
-
-
 
                                         <br>
 
@@ -178,7 +130,6 @@
                                             <br><br>
                                         </div>
 
-
                                         <div id="comments_box_<?php echo $post_id; ?>" style="display: none">
                                             <div class="form-row align-items-center">
                                                 <div class="col-lg-12 col-sm-12" align="center">
@@ -191,14 +142,7 @@
                                             <br>
                                         </div>
 
-
-
-
                                     <?php } ?>
-
-
-
-
 
                                     <script>
                                         function comment_list_post_<?php echo $post_id; ?>(comment_ordered, order_id) {
@@ -243,16 +187,6 @@
                                         }
                                     </script>
 
-
-
-
-
-
-
-
-
-
-
                                     <?php if(!empty($sub_package_detail[0]['followers'])) { ?>
                                     <div class="form-row align-items-center">
                                         <div class="col-lg-3 col-sm-3">
@@ -267,8 +201,6 @@
                                     </div>
                                     <?php } ?>
 
-
-
                                 </div>
                                 <div class="modal-footer">
                                     <input type="submit" value="Update" class="btn btn-primary" id="update_btn_<?php echo $post_code; ?>">
@@ -277,39 +209,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                             <div class="col-lg-4 col-sm-4">
                                 <div class='package-box animated swing' <?php if($order_status == 'Done' || !empty($post_detail[0]['post_status']) && $post_detail[0]['post_status'] == 'Done') {?>style="border: 2px solid #ff0002 !important;" <?php } ?>>
@@ -355,23 +254,10 @@
                 <?php } ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
                 <div class="clearfix"></div>
             </section>
 
-
         </main>
-
 
     </div>
 </div>

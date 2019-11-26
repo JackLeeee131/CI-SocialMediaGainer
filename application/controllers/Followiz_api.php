@@ -2,14 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Followiz_api extends CI_Model {
 
-
-
-
     public $api_url = ''; // API URL
 
     public $api_key = ''; // Your API key
-
-
 
     public function __construct()
     {
@@ -39,7 +34,6 @@ class Followiz_api extends CI_Model {
             return 0;
         }
     }
-
 
     public function order($data) { // add order
 

@@ -4,11 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
 
 
 <div class="wrapper">
@@ -69,8 +65,6 @@
                                     <th>Status</th>
                                 </tr>
 
-
-
                                 <?php  $i = 1; foreach($accounts_list as $account) { ?>
 
 
@@ -91,8 +85,6 @@
                                         <td class="col-sm-1">
                                         <input type="text" value="<?php echo $account['account_funds']; ?>" onblur="add_funds(this.value,<?php echo $account['id']; ?>)" class="form-control">
                                         </td>
-
-
 
                                     <td><a href="<?php echo base_url().'admin/user_accounts/update_funds/'.$account['id'];?>">Update Funds</a> </td>
                                     <td><a href="<?php echo base_url().'admin/user_accounts/update_status/'.$account['id'];?>" title="Change Status ( You can't be able to view the Banned users! )"  ><?php echo $account['status']; ?></a> </td>

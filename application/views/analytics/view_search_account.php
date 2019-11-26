@@ -1,24 +1,14 @@
 <style>
-
-
     #graph,
     #graph2,
     #graph3 {
-
         min-height: 250px;
-
     }
-
     #graph3 svg {
-
         height: 262px;
-
     }
-
     .card-body {
-
         padding: 1rem
-
     }
 
     html, body {
@@ -181,36 +171,6 @@
 
                     <div class="account">
 
-
-                        <!-- <div class="top-bar">
-
-                            <div class="user-info">
-
-                                <div class="profile-picture">
-
-                                    <img src="<?php /*echo $profile_pic; */ ?>" class="avatar" >
-
-                                </div>
-
-                                <div class="user-bio">
-
-                                    <div class="names">
-
-                                        <a href="https://www.twitter.com/BishopJakes" class="profile-url" target="_blank"><p class="name">T.D. Jakes</p></a>
-
-                                        <p class="username">@<span>BishopJakes</span></p>
-
-                                    </div>
-
-                                    <p class="bio"><span>Senior Pastor of The Potter’s House <a class="search-account">@TPHDallas</a> in Dallas, TX. Author of the # 1 New York Times…</span> <a href="http://www.tdjakes.org" target="_blank" class="website">http://www.tdjakes.org</a></p>
-
-                                </div>
-
-                            </div>
-
-                        </div>-->
-
-
                         <div class="top-bar">
 
                             <div class="user-info">
@@ -218,8 +178,6 @@
                                 <div class="profile-picture">
 
                                     <img src="<?php echo $profile_pic; ?>" class="avatar" width="56px" height="56px">
-
-                                    <!--                                    <img src="/img/icons/instagram.png" class="platform">-->
 
                                 </div>
 
@@ -231,9 +189,7 @@
                                            style="display: inline-block;" class="profile-url"
 
                                            target="_blank"><p class="name"
-
                                                               style="color: black; font-weight: bold; font-size: 18px; margin-bottom: 0"><?php echo $searched_account; ?></p>
-
                                         </a>
 
                                         <p class="username" style="margin-bottom: 0">
@@ -276,25 +232,6 @@
                                 <span>Following</span>
 
                             </div>
-
-
-                            <!-- <div class="avg-views" style="display: none;">
-
-                                <p><?php /*echo $instagram_data['avg_views']; */ ?></p>
-
-                                <span>Avg Views</span>
-
-                            </div>
-
-                            <div class="avg-viewRate" style="display: none;">
-
-                                <p></p>
-
-                                <span>Avg View Rate</span>
-
-                            </div>-->
-
-
                             <div class="avg-likes">
 
                                 <p><?php echo number_format($instagram_data['avg_likes']); ?></p>
@@ -310,14 +247,6 @@
                                 <span>Avg Comments</span>
 
                             </div>
-
-                            <!-- <div class="avg-shares" style="display: none;">
-
-                                 <p></p>
-
-                                 <span>Avg Shares</span>
-
-                             </div>-->
 
                             <div class="avg-engRate">
 
@@ -377,12 +306,6 @@
 
                                 </button>
 
-                                <!--<button id="views" class="btn btn-default"
-
-                                        onclick="get_month_data('views', $('#inlineFormCustomSelect').val())">Views
-
-                                </button>-->
-
                                 <button id="comments" class="btn btn-default"
 
                                         onclick="get_month_data('comments', $('#inlineFormCustomSelect').val())">
@@ -402,36 +325,6 @@
 
                 </div>
 
-
-                <!--
-
-                                <br/><br><br>
-
-
-
-
-
-
-
-                                <div class="col-lg-12">
-
-
-
-
-
-                                    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-
-
-
-
-                                </div>
-
-
-
-                <br><br><bR>-->
-
-
                 <div class="col-lg-12">
 
 
@@ -442,10 +335,6 @@
                         <div id="graph" class="prettyprint linenums"></div>
 
                         <script>
-
-                            // Use Morris.Bar
-
-
                             Morris.Bar({
 
                                 element: 'graph',
@@ -574,29 +463,12 @@
 
                                 complete: function () {
 
-                                    /*     $('#analytics').removeClass('page_loader');
-
-                                         $('#spinner').css('display', 'none');
-
-                                         $('#analytics_content').css('visibility', 'visible');*/
-
-
                                     $('#spinner').css('display', 'none');
 
                                     $('.container-fluid').css('opacity', 'unset');
 
 
                                 },
-
-                                /* error: function () {
-
-                                     alert('Something went Wrong');
-
-                                     location.reload();
-
-                                 }*/
-
-
 
                                 error: function (xmlhttprequest, textstatus, message) {
 

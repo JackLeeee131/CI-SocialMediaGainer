@@ -3,13 +3,6 @@
 <body>
 
 
-
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -77,12 +70,6 @@
                     </div>
 
                 <?php }?>
-
-
-
-
-
-
 
                 <div class="clearfix"></div>
             </section>

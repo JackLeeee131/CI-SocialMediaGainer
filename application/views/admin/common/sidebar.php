@@ -1,8 +1,4 @@
-
-
-
     <header class="main-header">
-
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -19,18 +15,15 @@
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-
-
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-<!--                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
+                        <!--  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
                             <span class="hidden-xs"><?php echo ucfirst($this->session->userdata('username')); ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-<!--                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+                            <!--  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
 
                                 <p>
                                     <?php echo ucfirst($this->session->userdata('username')); ?>
@@ -59,32 +52,16 @@
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-            <!-- Sidebar user panel -->
-
-            <!-- search form -->
-<!--            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>-->
-            <!-- /.search form -->
-            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
                 <li><a href="<?php echo base_url();?>admin/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-
 
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Instagram Packages</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?php echo base_url();?>admin/instagram_packages"><i class="fa fa-circle-o"></i> Instagram Packages</a></li>
@@ -93,56 +70,36 @@
                 </li>
 
 
-<!--                <li class="treeview">
-                    <a href="<?php /*echo base_url();*/?>ig_onetime_order">
-                        <i class="fa fa-dashboard"></i> <span>Instagram One Time Orders</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="<?php /*echo base_url();*/?>add_package"><i class="fa fa-circle-o"></i> Add Packages</a></li>
-                        <li><a href="<?php /*echo base_url();*/?>view_onetime_order"><i class="fa fa-circle-o"></i> View Packages</a></li>
-                    </ul>
-                </li>-->
-
-
-
-                <li class="treeview">
+                <!-- <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>One Time Orders</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?php echo base_url();?>admin/package_setup"><i class="fa fa-circle-o"></i> Setup One Time Orders</a></li>
                         <li><a href="<?php echo base_url();?>admin/track_oneTime_orders"><i class="fa fa-circle-o"></i> Track One Time Orders </a></li>
                     </ul>
-                </li>
-
+                </li> -->
 
                 <li><a href="<?php echo base_url();?>admin/user_accounts"><i class="fa fa-dashboard"></i> <span>Account Status</span></a></li>
                 <li><a href="<?php echo base_url();?>admin/api_setup"><i class="fa fa-dashboard"></i> <span>API & Key</span></a></li>
-                <li><a href="<?php echo base_url();?>admin/payment_setup"><i class="fa fa-dashboard"></i> <span>Payment Info</span></a></li>
-                <li><a href="<?php echo base_url();?>admin/manage_comments"><i class="fa fa-dashboard"></i> <span>Custom Comments</span></a></li>
+                <!-- <li><a href="<?php echo base_url();?>admin/manage_comments"><i class="fa fa-dashboard"></i> <span>Custom Comments</span></a></li> -->
                 <li><a href="<?php echo base_url();?>admin/dripfeed"><i class="fa fa-dashboard"></i> <span>Dripfeed</span></a></li>
-
 
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Other Setup</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?php echo base_url();?>admin/setup"><i class="fa fa-circle-o"></i> IG Name Changing Setup</a></li>
                        <li><a href="<?php echo base_url();?>admin/setup/keywords_setup"><i class="fa fa-circle-o"></i> Website Keywords Setup</a></li>
                     </ul>
                 </li>
-
-
             </ul>
         </section>
         <!-- /.sidebar -->

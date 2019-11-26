@@ -211,20 +211,12 @@
     <div class="footer-text">
         <h2><img src="<?php echo base_url(); ?>assets/img/gainer-logo.png" alt=""/></h2>
     </div>
-    <!-- social icon-->
-    <!--  <div class="footer-social-icon">
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-      </div>-->
+
     <div class="footer-menu">
         <nav>
             <ul>
                 <li><a href="<?php echo base_url(); ?>">About</a></li>
                 <li><a href="<?php echo base_url(); ?>welcome/terms">Terms &amp; Conditions</a></li>
-                <!-- <li><a href="#">Privacy Policy</a></li>
-                 <li><a href="#contact">Contact</a></li>-->
             </ul>
         </nav>
     </div>

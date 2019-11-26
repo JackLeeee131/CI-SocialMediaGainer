@@ -66,7 +66,6 @@ class Package_Setup extends CI_Controller {
             $this->session->set_flashdata('success_message', 'Package Updated Successfully');
             redirect('admin/package_setup');
 
-
     }
 
 
@@ -85,28 +84,11 @@ class Package_Setup extends CI_Controller {
         redirect('admin/package_setup');
     }
 
-
-
-
-
     public function delete_customOrder_range($range_id) {
         is_admin_in();
 
         $this->common_model->delete_table('tbl_customorder_ranges', array('range_id' => $range_id));
         $this->session->set_flashdata('success_message_range', 'Range Deleted Successfully');
         redirect('admin/package_setup');
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

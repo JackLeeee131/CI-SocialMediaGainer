@@ -1,74 +1,26 @@
 
 
-
-
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="container-fluid">
 
     <div class="row">
 
-
-
-
-
         <main role="main" class="right-section">
-
-
 
             <h1 class="heading">Confirm Package Order</h1>
 
-
-
             <section class="row text-center placeholders">
 
-
-
                 <div class="col-lg-8 col-sm-10 offset-lg-2 offset-sm-1">
-
-
 
                     <div class="boxstyle">
 
                         <a href="<?php echo base_url().'packages/package_detail/'.$package_data['sub_package_id'];?>" class="btn btn-outline-secondary pull-left"><i class="fa fa-angle-double-left"></i> Back</a>
 
-
-
-
-
-
-
-
-
                         <a href="<?php echo base_url().'packages/confirmed_pay/'.$package_data['sub_package_id'].'/'.$order_id;?>" class="btn btn-success pull-right" id="confirm_link"> Confirmed & Pay <i class="fa fa-angle-double-right"></i></a>
 
-
-
-
-
-
-
-
-
                         <div class="clearfix"></div><hr />
-
-
 
                         <form>
 
@@ -80,11 +32,7 @@
 
                             </div>
 
-
-
                         </form>
-
-
 
                         <table class="table table-striped text-left">
 
@@ -106,13 +54,9 @@
 
                             </tr>
 
-
-
                             </tbody>
 
                         </table>
-
-
 
                         <table class="table table-striped text-left">
 
@@ -140,52 +84,20 @@
 
                         </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div class="clearfix"></div>
 
                     </div><!-- / boxstyle -->
 
-
-
                 </div>
-
-
 
                 <div class="clearfix"></div>
 
             </section>
 
-
-
-
-
         </main>
-
-
-
-
-
     </div>
 
 </div>
-
-
-
 
 
 <script>
@@ -215,11 +127,7 @@
     });
 
 
-
 </script>
-
-
-
 
 
 </body>

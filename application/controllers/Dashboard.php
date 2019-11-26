@@ -9,22 +9,10 @@ class Dashboard extends CI_Controller
         parent::__construct();
     }
 
-
-    /*
-    function scrape_insta($username) {
-    $insta_source = file_get_contents('http://instagram.com/'.$username);
-    $shards = explode('window._sharedData = ', $insta_source);
-    $insta_json = explode(';</script>', $shards[1]);
-    $insta_array = json_decode($insta_json[0], TRUE);
-    return $insta_array;
-    }*/
     public function index()
     {
         is_user_in();
-        /*  require_once('Followiz_api.php');
-        $api = new Followiz_api();
-        $services = $api->services();
-        $balance = $api->balance();*/
+        
         $this->common_model->delete_table('tbl_orders', array('payment_status' => 'not confirmed'));
         $this->common_model->delete_table('tbl_custom_orders', array('payment_status' => 'not confirmed'));
         $this->load->view('common/header');
@@ -34,14 +22,12 @@ class Dashboard extends CI_Controller
         $this->load->view('common/footer');
     }
 
-
     public function get_dashboard_data()
     {
         is_user_in();
         $data['insta_users'] = $this->common_model->get_insta_users();
         $this->load->view('dashboard/loader', $data);
     }
-
 
     public function view_posts($order_id)
     {
@@ -54,7 +40,6 @@ class Dashboard extends CI_Controller
         $this->load->view('dashboard/view_posts', $data);
         $this->load->view('common/footer');
     }
-
 
     public function get_comment_list()
     {
@@ -74,11 +59,11 @@ class Dashboard extends CI_Controller
             $i = 1;
             foreach ($qry as $comments) {
                 echo '<div class="form-row align-items-center">
-<div class="col-lg-2 col-sm-2"> ' . $i++ . '  </div>
-<div class="col-lg-6 col-sm-6">
-<input name="comment_list[]" type="text" value="' . $comments['comment_description'] . '" class="form-control comments_box">
-</div>
-</div>';
+                        <div class="col-lg-2 col-sm-2"> ' . $i++ . '  </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <input name="comment_list[]" type="text" value="' . $comments['comment_description'] . '" class="form-control comments_box">
+                        </div>
+                    </div>';
             }
         }
     }

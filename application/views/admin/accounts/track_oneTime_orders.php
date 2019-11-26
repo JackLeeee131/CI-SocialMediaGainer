@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -24,7 +19,7 @@
                 <li class="active">Payment Info</li>
             </ol>
         </section>
-<br>
+        <br>
         <!-- Main content -->
         <section class="content">
 
@@ -52,7 +47,6 @@
                                 </tr>
 
 
-
                                 <?php  $i = 1; foreach($past_orders_detail as $custom_order) {   //echo '<pre>'; print_r($custom_order); echo '</pre>';?>
 
 
@@ -68,7 +62,6 @@
                                         <td><?php echo $custom_order['order_status']; ?></td>
 
                                     </tr>
-
 
                                 <?php } ?>
                                 <?php if(count($past_orders_detail) == 0) { ?>

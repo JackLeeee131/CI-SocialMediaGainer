@@ -1,31 +1,10 @@
 
 
-
-
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="container-fluid">
 
     <div class="row">
-
-
-
 
 
         <main role="main" class="right-section">
@@ -136,53 +115,25 @@
 
                         </div>
 
-
-
                         <button type="submit" class="btn btn-primary full-width">Save</button>
 
                         <?php echo form_close(); ?>
-
-
-
-
-
-
 
                         <div class="clearfix"></div>
 
                     </div>
 
-
-
-
-
-
-
                 </div>
 
             </section>
 
-
-
-
-
         </main>
-
-
-
-
 
     </div>
 
 </div>
 
-
-
-
-
 <script>
-
-
 
     $(document).ready(function(){
 
@@ -190,15 +141,7 @@
 
     });
 
-
-
-
-
 </script>
-
-
-
-
 
 </body>
 

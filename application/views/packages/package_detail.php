@@ -65,42 +65,7 @@
 
                         <?php if (!empty($sub_package_detail[0]['followers'])) { ?>
 
-                            <!--  <table class="table text-left">
-
-                                  <thead>
-
-                                  <tr>
-
-                                      <th scope="col" style="border-top:0px;">Followers</th>
-
-                                  </tr>
-
-                                  </thead>
-
-                                  <tbody>
-
-                                  <tr>
-
-                                      <td> <input value="once" type="radio" name="followers_type" id="followers_once"> Once a day</td>
-
-                                  </tr>
-
-                                  <tr>
-
-                                      <td><input value="twice" type="radio" name="followers_type" id="followers_twice"> Twice a day</td>
-
-                                  </tr>
-
-                                  </tbody>
-
-                              </table>
-  -->
                         <?php } ?>
-
-
-
-
-
 
 
                         <?php // ?>
@@ -138,27 +103,16 @@
                             $post_qty_likes = $sub_package_detail[0]['likes'];
                             $post_qty_views = $sub_package_detail[0]['views'];
 
-
-                            //echo 'post likes - '.$post_qty_likes. 'post views - '. $post_qty_views. '<br>';
-
-
-
-
                             $dripfeed_run = $max_dripfeed[0]['dripfeed_run'];
 
-
-                            //echo '-- '.$dripfeed_run.'<br>';
                             $calculate_post_likes = $post_qty_likes / $dripfeed_run;
                             $min_req_quantity_likes = $min_qty_likes * $dripfeed_run;
 
                             $calculate_post_views = $post_qty_views / $dripfeed_run;
                             $min_req_quantity_views = $min_qty_views * $dripfeed_run;
 
-
-                            //echo 'cal post likes - ' . $calculate_post_likes . ' and cal post views - ' . $calculate_post_views .' min likes - ' . $min_qty_likes . ' and min views - ' . $min_qty_views;
                             if ($calculate_post_likes >= $min_qty_likes && $calculate_post_views >= $min_qty_views) {
                                 ?>
-
 
                                 <tr>
 
@@ -172,10 +126,6 @@
                                 </tr>
 
                             <?php } ?>
-
-
-
-
 
                             </tbody>
 

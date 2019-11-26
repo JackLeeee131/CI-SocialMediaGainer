@@ -181,50 +181,12 @@
                                     </script>
 
 
-
-
                                     <br>
                                     <button class="btn btn-success pull-right" id="followers_submit_btn"> Proceed <i
                                                 class="fa fa-angle-double-right"></i></button>
                                     <div class="clearfix"></div>
                                     <?php echo form_close(); ?>
                                 </div><!--/ tab content 1 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                 <div class="tab-pane fade" id="pills-Likes" role="tabpanel"
                                      aria-labelledby="pills-Likes-tab">

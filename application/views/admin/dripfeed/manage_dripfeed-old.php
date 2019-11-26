@@ -5,10 +5,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 
-
-
-
-
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -125,8 +121,6 @@
 
                             </div>
 
-
-
                             <!-- /.box-body -->
                             <div class="box-footer">
                                 <input type="submit" class="btn btn-info pull-right" value="Save">
@@ -164,11 +158,7 @@
                                     <th>Delete</th>
                                 </tr>
 
-
-
                                 <?php  $i = 1; foreach($dripfeed_detail as $dripfeed) { ?>
-
-
                                     <tr>
                                         <td><?php echo $i++; ?></td>
                                         <td><?php echo $dripfeed['dripfeed_for']; ?></td>
@@ -178,7 +168,6 @@
                                         <td><a href="<?php echo base_url().'admin/dripfeed/update_dripfeed/'.$dripfeed['dripfeed_id']; ?>"> Edit </a> </td>
                                         <td><a href="<?php echo base_url().'admin/dripfeed/delete_dripfeed/'.$dripfeed['dripfeed_id']; ?>"> Delete </a> </td>
                                     </tr>
-
                                 <?php } ?>
 
                             </table>
@@ -189,7 +178,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-
 
         </section>
         <!-- /.content -->

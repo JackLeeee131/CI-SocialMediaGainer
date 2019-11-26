@@ -38,12 +38,6 @@ public function add_funds() {
         $this->session->set_flashdata('error_message', 'Unable to process, Minimum Amount is not matched. Please adjust accordingly');
         redirect('add_funds');
     } else {
-
-
-
-
-
-
         if($payment_method == 'Paypal') {
 
             //Set variables for paypal form
@@ -62,9 +56,7 @@ public function add_funds() {
             $this->paypal_lib->add_field('notify_url', $notifyURL);
             $this->paypal_lib->paypal_auto_form();
 
-
         } else {
-
             include APPPATH.'third_party/coingate-php-master/init.php';
             \CoinGate\CoinGate::config(array(
                 'environment' => 'sandbox', // sandbox OR live
@@ -106,13 +98,6 @@ public function add_funds() {
 
         }
 
-
-
-
     }
-
 }
-
-
-
 }

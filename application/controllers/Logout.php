@@ -15,9 +15,6 @@ class Logout extends CI_Controller {
 
        $data = array('user_id' => '', 'session_id' => '', 'username' => '', 'email' => '', 'user_type' => '', 'status' => '', 'created_date' => '');
        $this->session->unset_userdata($data);
-
-
-
        redirect(base_url(), 'refresh');
    }
 }

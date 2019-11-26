@@ -8,10 +8,6 @@
 <body class="hold-transition login-page">
 
 
-
-
-
-
 <?php echo form_open('admin/login/userlogin'); ?>
 
     <div class="login-box">
@@ -41,13 +37,7 @@
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
- <!--                   <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox"> Remember Me
-                            </label>
-                        </div>
-                    </div>-->
+
                     <!-- /.col -->
                     <div class="col-xs-4">
                         <input type="submit" class="btn btn-primary btn-block btn-flat" value="Sign In">
@@ -55,11 +45,6 @@
                     <!-- /.col -->
                 </div>
                 <?php echo form_close(); ?>
-
-            <!-- /.social-auth-links -->
-<!--
-            <a href="#">I forgot my password</a><br>
-            <a href="#" class="text-center">Register a new membership</a>-->
 
         </div>
         <!-- /.login-box-body -->

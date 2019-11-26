@@ -29,12 +29,7 @@ class Instagram_Packages extends CI_Controller {
         $followers = $this->input->post('followers');
         $special_id = $this->input->post('special_order_id');
 
-
-
-
-
         if(!empty($package_id) && !empty($price)){
-
 
             if($package_id == 1 && empty($likes) || empty($views)) {
                 $this->session->set_flashdata('error_message', 'All fields are required11');
@@ -71,18 +66,9 @@ class Instagram_Packages extends CI_Controller {
                 $this->session->set_flashdata('success_message', 'Package Updated Successfully');
                 redirect('admin/instagram_packages');
 
-
         }else{
             $this->session->set_flashdata('error_message', 'All fields are requireddddd');
             redirect('admin/instagram_packages');
         }
-
     }
-
-
-
-
-
-
-
 }

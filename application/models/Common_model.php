@@ -127,7 +127,8 @@ class Common_Model extends CI_Model
         $this->db->select('*,tbl_users.user_id as id');
         $this->db->from('tbl_users');
         $this->db->join('tbl_orders', 'tbl_users.user_id = tbl_orders.user_id', 'left');
-        $array = array('tbl_users.user_type !=' => 'admin', 'tbl_orders.payment_status' => 'Completed', 'tbl_orders.user_id' => $this->session->userdata('user_id'), 'tbl_orders.txn_type' => 'package order', 'tbl_orders.order_status' => 'Pending');
+        $array = array('tbl_users.user_type !=' => 'admin', 'tbl_orders.payment_status' => 'Completed', 'tbl_orders.user_id' => $this->session->userdata('user_id'), 
+                        'tbl_orders.txn_type' => 'package order', 'tbl_orders.order_status' => 'Pending');
         $this->db->where($array);
         $qry = $this->db->get()->result_array();
         //echo '<pre>'; print_r($qry); echo '</pre>'; exit;

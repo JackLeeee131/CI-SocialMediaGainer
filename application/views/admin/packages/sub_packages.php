@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -27,7 +22,6 @@
 
         <!-- Main content -->
         <section class="content">
-
 
             <div class="row">
 
@@ -73,11 +67,6 @@
                                     </select>
                                 </div>
                             </div>
-
-
-
-
-
 
                             <div class="form-group" style="display: none" id="likes">
                                 <label for="" class="col-sm-3 control-label">Likes</label>
@@ -140,9 +129,6 @@
                                 </div>
                             </div>
 
-
-
-
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
@@ -160,8 +146,6 @@
             </div>
 
 
-
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="box">
@@ -171,8 +155,6 @@
                         <!-- /.box-header -->
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
-
-
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Package Name</th>
@@ -185,8 +167,6 @@
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
-
-
 
                                 <?php  $i = 1; foreach($sub_packages_list as $sub_package) { ?>
 
@@ -202,11 +182,8 @@
                                         <td><?php echo $sub_package['special_id']; ?></td>
                                         <td><a href="<?php echo base_url().'admin/sub_packages/update_sub_package/'.$sub_package['sub_package_id']; ?>"> Edit </a> </td>
                                         <td><a href="<?php echo base_url().'admin/sub_packages/delete_sub_package/'.$sub_package['sub_package_id']; ?>"> Delete </a> </td>
-
                                     </tr>
-
                                 <?php } ?>
-
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -215,7 +192,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-
 
         </section>
         <!-- /.content -->

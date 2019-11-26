@@ -53,12 +53,4 @@ class Api_Setup extends CI_Controller {
 
     }
 
-
-
-
-
-
-
-
-
 }

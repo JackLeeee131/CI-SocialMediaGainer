@@ -3,16 +3,8 @@
 <body>
 
 
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
-
-
 
         <main role="main" class="right-section">
 
@@ -74,19 +66,9 @@
                             </tbody>
                         </table>
 
-
-
-
-
-
-
-
-
-
                         <div class="form-group text-left" style="display: none" id="custom_comments">
                             <label for="exampleInputEmail1">Add Comments </label>
 
-<!--                            <span style="color: #ff0002">( Remaining: --><?php //echo $comments_data['post_comments'] - $count_comments[0]['comments_count']; ?><!-- )</span>-->
                             <?php
 
                             if(!empty($order_qty)) { $qty =  $order_qty; } else { $qty =  $comments_data['post_comments'];}
@@ -151,25 +133,6 @@
                             <?php } ?>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary full-width" value="Send">
                         </div>
@@ -182,7 +145,6 @@
 
                         <?php echo form_close(); ?>
 
-
                         <script>
                             $('#custom_comments_form').submit(function () {
                                 var res = true;
@@ -194,25 +156,15 @@
                                 return res;
                             });
                         </script>
-
-
-
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
             </section>
-
-
         </main>
 
     </div>
 </div>
-
-
-
-
-
 
 </body>
 </html>

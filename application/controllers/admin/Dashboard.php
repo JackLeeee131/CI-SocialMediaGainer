@@ -28,13 +28,8 @@ public function index() {
         'total_checkout' => $accounts_data[0]['total_checkout'],
         'total_money_spent' => $money_spent[0]['total_amount'],
     );
-
-
     $this->load->view('admin/dashboard/dashboard', $data);
     $this->load->view('admin/common/footer');
 }
-
-
-
 
 }

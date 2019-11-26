@@ -19,7 +19,4 @@ class Track_oneTime_orders extends CI_Controller {
         $this->load->view('admin/accounts/track_oneTime_orders', $data);
         $this->load->view('admin/common/footer');
     }
-
-
-
 }

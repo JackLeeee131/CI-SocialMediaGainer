@@ -2,8 +2,6 @@
 
 <body>
 
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -15,7 +13,6 @@
                         <a href="<?php echo base_url(); ?>custom_packages<?php if($confirm_order_detail[0]['package_name'] == 'Comments') { echo '/confirm_comments_order/'.$confirm_order_detail[0]['order_qty'].'/'.$confirm_order_detail[0]['instagram_url'].'/'.$confirm_order_detail[0]['order_price']; }?>" class="btn btn-outline-secondary pull-left"><i class="fa fa-angle-double-left"></i> Back</a>
 
                         <a href="<?php echo base_url().'custom_packages/confirmed_pay/'.$confirm_order_detail[0]['custom_order_code'];?>" class="btn btn-success pull-right" id="confirm_link"> Confirmed & Pay <i class="fa fa-angle-double-right"></i></a>
-
 
                         <div class="clearfix"></div><hr />
 
@@ -63,7 +60,6 @@
 
                 <div class="clearfix"></div>
             </section>
-
 
         </main>
 

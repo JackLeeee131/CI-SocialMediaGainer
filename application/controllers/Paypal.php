@@ -9,25 +9,15 @@ class Paypal extends CI_Controller
         $this->load->library('paypal_lib');
     }
 
-
     function custom_order_success()
     {
 
     }
 
-
-
-
-
-
     function success()
     {
 
     }
-
-
-
-
 
     function success_funds()
     {
@@ -85,13 +75,13 @@ class Paypal extends CI_Controller
     function ipn()
     {
         is_user_in();
-//paypal return transaction details array
+        //paypal return transaction details array
         $paypalInfo = $this->input->post();
 
         $paypalURL = $this->paypal_lib->paypal_url;
         $result = $this->paypal_lib->curlPost($paypalURL, $paypalInfo);
 
-//check whether the payment is verified
+        //check whether the payment is verified
         if (preg_match("/VERIFIED/i", $result)) {
 
             $txt = json_encode($paypalInfo);
@@ -99,7 +89,5 @@ class Paypal extends CI_Controller
             fwrite($myfile, $txt);
             fclose($myfile);
         }
-
-
     }
 }

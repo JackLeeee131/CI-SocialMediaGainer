@@ -2,12 +2,10 @@
 
 class Coinpayment extends CI_Controller
 {
-
     function __construct()
     {
         parent::__construct();
     }
-
 
     public function order_callback($key)
     {
@@ -35,10 +33,6 @@ class Coinpayment extends CI_Controller
         }
     }
 
-
-
-
-
     public function funds_callback($key)
     {
         if ($key != '') {
@@ -56,8 +50,6 @@ class Coinpayment extends CI_Controller
                     if ($status == 'paid') {
 
                         $this->db->insert('tbl_cron', array('test_string' => '222'));
-
-
 
                         $account_balance = $check_balance[0]['current_balance'] + $price;
                         $referral_percent = $check_balance[0]['referral'];
@@ -83,13 +75,6 @@ class Coinpayment extends CI_Controller
             }
         }
     }
-
-
-
-
-
-
-
 
     public function custom_order_callback($key)
     {
@@ -141,13 +126,13 @@ class Coinpayment extends CI_Controller
 
     function ipn()
     {
-//paypal return transaction details array
+        //paypal return transaction details array
         $paypalInfo = $this->input->post();
 
         $paypalURL = $this->paypal_lib->paypal_url;
         $result = $this->paypal_lib->curlPost($paypalURL, $paypalInfo);
 
-//check whether the payment is verified
+        //check whether the payment is verified
         if (preg_match("/VERIFIED/i", $result)) {
 
             $txt = json_encode($paypalInfo);
@@ -155,7 +140,5 @@ class Coinpayment extends CI_Controller
             fwrite($myfile, $txt);
             fclose($myfile);
         }
-
-
     }
 }

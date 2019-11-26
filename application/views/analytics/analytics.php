@@ -1,25 +1,16 @@
 <style>
-
-
     #graph,
     #graph2,
     #graph3 {
-
         min-height: 250px;
-
     }
 
     #graph3 svg {
-
         height: 262px;
-
     }
-
-
 </style>
 
 <body>
-
 
 <div class="container-fluid">
 
@@ -212,8 +203,6 @@
                                         foreach ($month_analytics as $month) {
                                             echo json_encode($month) . ',';
                                         }
-
-
 
                                         ?>
 

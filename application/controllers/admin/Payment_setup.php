@@ -51,7 +51,6 @@ class Payment_Setup extends CI_Controller {
                 'message' => $this->input->post('message'),
             );
 
-
             $this->common_model->update_table('tbl_payment_setup',$data, array('payment_id' => $edit_id));
             $this->session->set_flashdata('success_message', 'Payment Info Updated Successfully');
             redirect('admin/payment_setup');
@@ -64,13 +63,4 @@ class Payment_Setup extends CI_Controller {
         $this->load->view('admin/common/footer');
 
     }
-
-
-
-
-
-
-
-
-
 }

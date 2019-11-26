@@ -28,9 +28,7 @@ class Manage_Comments extends CI_Controller {
             $this->common_model->insert_table('tbl_comments',$data);
             $this->session->set_flashdata('success_message', 'Comment Added Successfully');
             redirect('admin/manage_comments');
-
     }
-
 
     public function delete_comments($comment_id) {
         is_admin_in();
@@ -38,13 +36,5 @@ class Manage_Comments extends CI_Controller {
         $this->session->set_flashdata('success_message', 'Comment Deleted Successfully');
         redirect('admin/manage_comments');
     }
-
-
-
-
-
-
-
-
 
 }

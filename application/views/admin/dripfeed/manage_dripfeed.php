@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -27,10 +22,7 @@
 <br>
         <!-- Main content -->
         <section class="content">
-
-
             <div class="row">
-
                 <!-- left column -->
                 <div class="col-md-2"> </div>
                 <!-- center column -->
@@ -40,7 +32,6 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Add Dripfeed Info</h3>
                         </div>
-
 
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -63,8 +54,6 @@
 
                             <div class="box-body">
 
-
-
                                 <div class="form-group">
                                     <label for="" class="col-sm-3 control-label">Dripfeed For</label>
                                     <div class="col-sm-6">
@@ -75,7 +64,6 @@
                                         </select>
                                     </div>
                                 </div>
-
 
                                 <div class="form-group" id="package_dropdown" style="display:">
                                     <label for="" class="col-sm-3 control-label">Dripfeed Runs</label>
@@ -90,7 +78,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="form-group" id="followers_dropdown" style="display: none">
                                     <label for="" class="col-sm-3 control-label">Days</label>
                                     <div class="col-sm-6">
@@ -104,8 +91,6 @@
                                     </div>
                                 </div>
 
-
-
                                 <div class="form-group">
                                     <label for="" class="col-sm-3 control-label">Dripfeed Price</label>
                                     <div class="col-sm-6">
@@ -114,8 +99,6 @@
                                 </div>
 
                             </div>
-
-
 
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -132,7 +115,6 @@
 
             </div>
 
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="box">
@@ -142,8 +124,6 @@
                         <!-- /.box-header -->
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
-
-
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th style="text-align: center">Dripfeed For</th>
@@ -152,8 +132,6 @@
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
-
-
 
                                 <?php  $i = 1; foreach($dripfeed_detail as $dripfeed) { ?>
 
@@ -176,7 +154,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-
 
         </section>
         <!-- /.content -->

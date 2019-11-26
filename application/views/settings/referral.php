@@ -18,29 +18,13 @@
 
     <div class="row">
 
-
-
-
-
         <main role="main" class="right-section">
-
-
 
             <h1 class="heading">Referral</h1>
 
-
-
             <section class="row placeholders">
 
-
-
-
-
                 <div class="col-lg-6 col-md-10 col-sm-10 offset-lg-3 offset-sm-1">
-
-
-
-
 
                     <?php if($this->session->flashdata('error_message')){ ?>
 
@@ -146,20 +130,13 @@
 
                             </div>
 
-
-
-
-
                             <a class="btn btn-primary full-width" data-clipboard-target="#content" href="#" onclick="copy_ref()">Copy</a>
 
                         </form>
 
-
-
                         <div class="clearfix"></div>
 
                     </div>
-
 
 
                 </div>
@@ -167,11 +144,7 @@
             </section>
 
 
-
-
-
         </main>
-
 
 
         <!-- checkout Modal -->
@@ -238,8 +211,6 @@
 
 
 
-
-
 <script>
 
     function copy_ref() {
@@ -259,9 +230,6 @@
     });
 
 </script>
-
-
-
 
 
 </body>

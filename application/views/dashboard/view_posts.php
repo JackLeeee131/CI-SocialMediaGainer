@@ -425,7 +425,7 @@
 
 
                             <div class="clearfix"></div>
-                        </div><!--/ package -->
+                        </div>
                     </div>
 
                     <script>

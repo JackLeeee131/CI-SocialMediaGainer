@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -27,7 +22,6 @@
 
         <!-- Main content -->
         <section class="content">
-
 
             <div class="row">
 
@@ -119,9 +113,6 @@
                                 </div>
                                 </div>
 
-
-
-
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -150,8 +141,6 @@
                         <!-- /.box-header -->
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
-
-
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Package Name</th>
@@ -162,8 +151,6 @@
                                     <th>Price</th>
                                     <th>Special Order ID</th>
                                 </tr>
-
-
 
                                 <?php  $i = 1; foreach($packages_list as $package) { ?>
 

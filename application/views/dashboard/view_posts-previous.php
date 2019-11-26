@@ -2,14 +2,6 @@
 
 <body>
 
-
-
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -38,9 +30,6 @@
                 </div>
             <?php }?>
 
-
-
-
             <section class="row text-center placeholders">
                 <?php
                 $username =  $insta_account[0]['instagram_name'];
@@ -54,11 +43,7 @@
                 $is_private = $account->isPrivate();
                 $sub_package_detail = $this->common_model->get_table_data('tbl_sub_packages','*',array('status'=> 'Active', 'sub_package_id' => $insta_account[0]['tbl_subpkg_id']), $row=1);
 
-
-
                 if ($is_private != 1) {
-
-                   // echo '<pre>'; print_r($sub_package_detail); echo '</pre>'; exit;
 
                     for ($i = 0; $i <= $sub_package_detail[0]['likes_per_post'] - 1; $i++) {
                         if (!empty($medias[$i])) {
@@ -72,8 +57,6 @@
                         $comments = $media->getCommentsCount();
                         $post_type = $media->getType();
                         $post_date = date('Y-m-d H:i:s', $media->getCreatedTime());
-
-                        //echo '<pre>'; print_r($order_id); echo '</pre>'; exit;
 
                         $sum_qry = $this->common_model->get_table_data('tbl_posts', 'SUM(post_likes) AS post_likes, SUM(post_views) AS post_views, SUM(post_comments) AS post_comments, SUM(post_followers) AS post_followers ', array('tbl_order_id' => $order_id), $row = 1);
                         if (!empty($sum_qry) && !empty($sub_package_detail)) {
@@ -93,13 +76,10 @@
 
                         if ($post_date >= $order_date) {
 
-//                        echo $post_code . ' and ' . $likes;
-
                             $post_detail = $this->common_model->get_table_data('tbl_posts', '*', array('tbl_order_id' => $order_id, 'post_code' => $post_code), $row = 1);
                             $this->common_model->update_table('tbl_posts', array('post_code' => $post_code, 'post_status' => 'Pending'), array('post_code' => $i + 1));
 
                             ?>
-
 
                             <!-- edit posts -->
                             <div class="modal fade" id="edit_post_model_<?php echo $post_code; ?>" tabindex="-1"
@@ -171,13 +151,6 @@
                                                     </div>
                                                 </div>
                                             <?php } ?>
-
-
-
-
-
-
-
 
                                             <?php if (!empty($sub_package_detail[0]['comments'])) { ?>
                                                 <div class="form-row align-items-center">
@@ -276,22 +249,6 @@
                                                     }
                                                 }
                                             </script>
-
-                                            <!--                                      <?php /*if(!empty($sub_package_detail[0]['followers'])) { */ ?>
-                                            <div class="form-row align-items-center">
-                                                <div class="col-lg-3 col-sm-3">
-                                                    <label>Followers</label>
-                                                </div>
-                                                <div class="col-lg-3 col-sm-3">
-                                                    <input type="text" value="<?php /*if(!empty($post_detail[0]['post_followers'])) { echo $post_detail[0]['post_followers']; } */ ?>" name="followers" class="form-control mb-2" id="inlineFormInput" placeholder="Followers">
-                                                </div>
-                                                <div class="col-lg-5 col-sm-5">
-                                                    <label><span style="color: #ff0002; font-weight: bold"><?php /*echo $followers_remaining;*/ ?> </span> Followers Remaining</label>
-                                                </div>
-                                            </div>
-                                        --><?php /*} */ ?>
-
-
                                         </div>
                                         <div class="modal-footer">
                                             <input type="submit" value="Update" class="btn btn-primary"
@@ -322,71 +279,12 @@
                                 </div>
                             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <?php
                         } else { ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                             <?php
                             $post_detail = $this->common_model->get_table_data('tbl_posts', '*', array('tbl_order_id' => $order_id, 'post_code' => $i), $row = 1);
                             ?>
-
 
                             <!-- edit featured posts -->
                             <div class="modal fade" id="edit_post_model_<?php echo $i; ?>" tabindex="-1" role="dialog"
@@ -430,10 +328,7 @@
                                                                } ?>" name="likes" class="form-control mb-2"
                                                                id="inlineFormInput" placeholder="Likes">
                                                     </div>
-                                   <!--                 <div class="col-lg-5 col-sm-5">
-                                                      <label><span style="color: #ff0002; font-weight: bold"><?php /*/*echo $likes_remaining; */?> </span>
-                                                            Likes Remaining</label>
-                                                    </div>-->
+                                  
                                                 </div>
                                             <?php } ?>
                                             <?php if (!empty($sub_package_detail[0]['views'])) { ?>
@@ -450,20 +345,8 @@
                                                                } ?>" name="views" class="form-control mb-2"
                                                                id="inlineFormInput" placeholder="Views">
                                                     </div>
-                                         <!--           <div class="col-lg-5 col-sm-5">
-                                                       <label><span
-                                                                    style="color: #ff0002; font-weight: bold"><?php /*/*echo $views_remaining; */?> </span>
-                                                            Views Remaining</label>
-                                                    </div>-->
                                                 </div>
                                             <?php } ?>
-
-
-
-
-
-
-
 
                                             <?php if (!empty($sub_package_detail[0]['comments'])) { ?>
                                                 <div class="form-row align-items-center">
@@ -477,11 +360,7 @@
                                                                onblur="comment_list_post_<?php echo $i; ?>(this.value,<?php echo $order_id; ?>)"
                                                                placeholder="Comments">
                                                     </div>
-                                       <!--             <div class="col-lg-5 col-sm-5">
-                                                        <label><span
-                                                                    style="color: #ff0002; font-weight: bold"><?php /*echo $comments_remaining; */?> </span>
-                                                            Comments Remaining</label>
-                                                    </div>-->
+                                       
                                                 </div>
 
 
@@ -571,21 +450,7 @@
                                                 }
                                             </script>
 
-                                            <!--                                        <?php /*if(!empty($sub_package_detail[0]['followers'])) { */ ?>
-                                            <div class="form-row align-items-center">
-                                                <div class="col-lg-3 col-sm-3">
-                                                    <label>Followers</label>
-                                                </div>
-                                                <div class="col-lg-3 col-sm-3">
-                                                    <input type="text" value="<?php /*if(!empty($post_detail[0]['post_followers'])) { echo $post_detail[0]['post_followers']; } */ ?>" name="followers" class="form-control mb-2" id="inlineFormInput" placeholder="Followers">
-                                                </div>
-                                                <div class="col-lg-5 col-sm-5">
-                                                    <label><span style="color: #ff0002; font-weight: bold"><?php /*echo $followers_remaining;*/ ?> </span> Followers Remaining</label>
-                                                </div>
-                                            </div>
-                                        --><?php /*} */ ?>
-
-
+                         
                                         </div>
                                         <div class="modal-footer">
                                             <input type="submit" value="Update" class="btn btn-primary"
@@ -621,12 +486,9 @@
 
                         <?php
                         }
-
-
                     }
 
                 } else { ?>
-
 
                     <div class="col-lg-8 col-sm-10 offset-lg-2 offset-sm-1">
                         <div class="boxstyle text-center">
@@ -634,28 +496,14 @@
                     </p>
                     </div>
                     </div>
-
                <?php  }
                 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <div class="clearfix"></div>
             </section>
 
 
         </main>
-
 
     </div>
 </div>

@@ -7,10 +7,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 
-
-
-
-
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -45,11 +41,7 @@
                                     <th>Package Description</th>
                                     <th>Package Status</th>
                                 </tr>
-
-
-
                                 <?php  $i = 1; foreach($packages_list as $package) { ?>
-
 
                                 <tr>
                                     <td><?php echo $i++; ?></td>

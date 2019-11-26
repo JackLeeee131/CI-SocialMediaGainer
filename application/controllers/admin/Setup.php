@@ -8,10 +8,8 @@
 
 class Setup extends CI_Controller
 {
-
     public function index()
     {
-
         is_admin_in();
         $this->load->view('admin/common/header');
         $this->load->view('admin/common/sidebar');
@@ -19,7 +17,6 @@ class Setup extends CI_Controller
         $this->load->view('admin/setup/igName_changing_setup', $data);
         $this->load->view('admin/common/footer');
     }
-
 
     public function update_igName_changeSetup() {
         is_admin_in();
@@ -38,14 +35,9 @@ class Setup extends CI_Controller
             $this->session->set_flashdata('success_message', 'Updated Successfully');
             redirect('admin/setup');
         }
-
-
     }
 
-
-
     public function keywords_setup() {
-
         is_admin_in();
         $this->load->view('admin/common/header');
         $this->load->view('admin/common/sidebar');
@@ -53,11 +45,6 @@ class Setup extends CI_Controller
         $this->load->view('admin/setup/keywords_setup',  $data);
         $this->load->view('admin/common/footer');
     }
-
-
-
-
-
 
     public function update_keywords() {
         is_admin_in();
@@ -80,22 +67,10 @@ class Setup extends CI_Controller
                 'keyword_description' => $this->input->post('keyword_description'),
             );
 
-            //echo $this->input->post('keyword_id'); exit;
-
             $qry = $this->common_model->update_table('tbl_website_keywords', $data, array('keyword_id' => $this->input->post('keyword_id')));
-
 
             $this->session->set_flashdata('success_message', 'Data Updated Successfully');
             redirect('admin/setup/keywords_setup');
-
         }
     }
-
-
-
-
-
-
-
-
 }

@@ -9,12 +9,7 @@ function __construct() {
 
 }
 
-
-
 public function index() {
-
-
-
     require 'vendor/autoload.php';
 
     $username =  'abdul';
@@ -37,27 +32,14 @@ public function index() {
         $post_type = $media->getType();
         $created_at = date('Y-m', $media->getCreatedTime());
 
-
-
-
-
-
-        //echo '<pre>'; print_r($media); echo '</pre>';
-
-
         $total_posts = count($key);
         $total_likes +=  $likes;
         $total_comments +=  $comments;
-
-
-
 
         $arr['post_data'][$i]["date"] =  $created_at;
         $arr['post_data'][$i]["likes"] =  $likes;
         $arr['post_data'][$i]["avg_likes"] =  0;
         $arr['post_data'][$i]["comments"] =  $comments;
-
-        //$arr['post_data']['post_date'][$i]  =  $created_at;
 
         $i++;
     }
@@ -70,28 +52,16 @@ public function index() {
     foreach($arr['post_data'] as $part){
         $code_as_key = $part['date'];
         if( isset($new_array[$code_as_key]) ){
-            //$new_array[$code_as_key]['likes 2'][] = $part['likes'];
-           // $new_array[$code_as_key]['total_posts'] = count($part);
             $new_array[$code_as_key]['likes'] += $part['likes'];
             $new_array[$code_as_key]['comments'] += $part['comments'];
-
         }
         else{
             $new_array[$code_as_key]=$part;
             $new_array[$code_as_key]['total_posts'] = count($part);
         }
 
-        //$new_array[$code_as_key]['avg_likes'] = $new_array[$code_as_key]['likes'] / count($part);
         $count++;
     }
-
-
-     //echo '<pre>'; print_r($new_array); echo '</pre>'; exit;
-
-    //$data['month_chart_data'] = json_encode($new_array);
-
-
-
 
     is_user_in();
     $this->load->view('common/header');
@@ -100,11 +70,5 @@ public function index() {
     $this->load->view('analytics/analytics' , $data);
     $this->load->view('common/footer');
 }
-
-
-
-
-
-
 
 }

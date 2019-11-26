@@ -4,12 +4,7 @@
 
 </head>
 
-
 <body class="hold-transition skin-blue sidebar-mini">
-
-
-
-
 
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
@@ -27,7 +22,6 @@
 <br>
         <!-- Main content -->
         <section class="content">
-
 
             <div class="row">
 

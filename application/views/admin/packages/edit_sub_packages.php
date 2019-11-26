@@ -7,10 +7,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 
-
-
-
-
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -106,18 +102,12 @@
                                 </div>
                             </div>
 
-
-
-
-
-
                             <div class="form-group" <?php if(empty($sub_packages_list[0]['likes'])) { ?> style="display: none" <?php } ?> id="per_post">
                                 <label for="" class="col-sm-3 control-label"> Per Post </label>
                                 <div class="col-sm-4">
                                     <input type="text" value="<?php if(!empty($sub_packages_list[0]['likes_per_post'])) { echo $sub_packages_list[0]['likes_per_post']; } ?>" class="form-control" name="likes_per_post" placeholder="Per Post">
                                 </div>
                             </div>
-
 
 
                             <div class="form-group" <?php if(empty($sub_packages_list[0]['followers'])) { ?> style="display: none" <?php } ?> id="followers">
@@ -129,7 +119,6 @@
                                     <input type="text" value="<?php if(!empty($sub_packages_list[0]['followers_per_day'])) { echo $sub_packages_list[0]['followers_per_day']; } ?>" class="form-control" name="followers_per_day" placeholder="PER DAY ( API Minimum )">
                                 </div>
                             </div>
-
 
                             <div class="form-group" <?php if(empty($sub_packages_list[0]['price'])) { ?> style="display: none" <?php } ?> id="price">
                                 <label for="" class="col-sm-3 control-label">Price</label>
@@ -144,8 +133,6 @@
                                     <input type="text" value="<?php if(!empty($sub_packages_list[0]['special_id'])) { echo $sub_packages_list[0]['special_id']; } ?>" class="form-control" name="special_order_id" placeholder="Special Order ID">
                                 </div>
                             </div>
-
-
 
 
                         </div>
@@ -164,9 +151,6 @@
 
             </div>
 
-
-
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="box">
@@ -176,7 +160,6 @@
                         <!-- /.box-header -->
                         <div class="box-body ">
                             <table class="table table-bordered table-hover">
-
 
                                 <tr>
                                     <th style="width: 10px">#</th>
@@ -189,8 +172,6 @@
                                     <th>Special Order ID</th>
                                     <th>Edit</th>
                                 </tr>
-
-
 
                                 <?php  $i = 1; foreach($sub_packages_list as $sub_package) { ?>
 

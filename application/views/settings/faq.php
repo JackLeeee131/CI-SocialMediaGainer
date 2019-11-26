@@ -2,14 +2,6 @@
 
 <body>
 
-
-
-
-
-
-
-
-
 <div class="container-fluid">
     <div class="row">
 
@@ -65,12 +57,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
 
                             <div class="card">
                                 <div class="card-header" id="headingThree">
@@ -205,26 +191,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                         </div>

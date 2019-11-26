@@ -663,34 +663,6 @@
                     </div>
                     <p style="color: #FFF;">Social Media Gainer uses real time data, which allows you to analyze your growth, activity, and engagement data at any point of the day.  This will also analyze your competition!</p>
 
-                    <!--<div class="app-download-area">
-
-                        <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
-
-                            <a href="#">
-
-                                <i class="fa fa-android"></i>
-
-                                <p class="mb-0"><span>available on</span> Google Store</p>
-
-                            </a>
-
-                        </div>
-
-                        <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
-
-                            <a href="#">
-
-                                <i class="fa fa-apple"></i>
-
-                                <p class="mb-0"><span>available on</span> Apple Store</p>
-
-                            </a>
-
-                        </div>
-
-                    </div>-->
-
                 </div>
 
             </div>
@@ -704,18 +676,6 @@
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- ***** Contact Us Area Start ***** -->
 
 <section class="footer-contact-area section_padding_100 clearfix" id="contact">
 
@@ -741,23 +701,6 @@
 
                 </div>
 
-                <!--<div class="address-text">
-
-                    <p><span>Address:</span> 40 Baria Sreet 133/2 NewYork City, US</p>
-
-                </div>
-
-                <div class="phone-text">
-
-                    <p><span>Phone:</span> +11-225-888-888-66</p>
-
-                </div>
-
-                <div class="email-text">
-
-                    <p><span>Email:</span> info@scoialmediagainer.com</p>
-
-                </div>-->
 
             </div>
 
@@ -847,16 +790,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- ***** Footer Area Start ***** -->
 
 <footer class="footer-social-icon text-center section_padding_70 clearfix">
@@ -869,19 +802,7 @@
 
     </div>
 
-    <!-- social icon-->
-
-  <!--  <div class="footer-social-icon">
-
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-
-        <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
-
-        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-
-        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-
-    </div>-->
+  
 
     <div class="footer-menu">
 
@@ -892,10 +813,6 @@
                 <li><a href="#home">About</a></li>
 
                 <li><a href="<?php echo base_url(); ?>welcome/terms">Terms &amp; Conditions</a></li>
-
-               <!-- <li><a href="#">Privacy Policy</a></li>
-
-                <li><a href="#contact">Contact</a></li>-->
 
             </ul>
 

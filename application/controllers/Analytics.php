@@ -1,13 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 class Analytics extends CI_Controller
 {
     function __construct() {
         parent::__construct();
     }
-
 
     public function index() {
         is_user_in();
@@ -19,11 +17,8 @@ class Analytics extends CI_Controller
         $this->load->view('common/footer');
     }
 
-
     public function search_account() {
         date_default_timezone_set('Asia/Karachi');
-        // echo date('m/d/Y', 1491004222);
-
         is_user_in();
         $user_id = $this->session->userdata('user_id');
 
@@ -38,8 +33,6 @@ class Analytics extends CI_Controller
         require 'vendor/autoload.php';
         $instagram_api = new \InstagramScraper\Instagram();
         $account = $instagram_api->getAccount($search_account);
-
-        //echo '<pre>'; print_r($account); echo '</pre>'; exit;
 
         $is_private = 0;
         if (empty($search_type) && empty($account['error'])) {
@@ -57,35 +50,15 @@ class Analytics extends CI_Controller
                 redirect('analytics');
             }
         } else {
-
-
            $medias = $instagram_api->getMediasAnalytics($search_account, 100);
-
-
-
-            //echo '<pre>'; print_r($medias); echo '</pre>'; exit;
-
-
 
             $newMonthArray = array();
             $newYearArray = array();
-
-                $counter = 12;
-
-
-
-
-
+            $counter = 12;
             $count_posts = 1;
             for ($i = 0; $i <= $counter; $i++) {
-
-
-
-
                 if (!empty($medias['edge_owner_to_timeline_media']['edges'][$i]['node'])) {
                     $media = $medias['edge_owner_to_timeline_media']['edges'][$i]['node'];
-
-                    //echo '<pre>'; print_r($media); echo '</pre>'; exit;
 
                     $postCode = $media['shortcode'];
                     $post_date = date("Y-m-d H:i:s", $media['taken_at_timestamp']);
@@ -97,10 +70,6 @@ class Analytics extends CI_Controller
                         $post_views = 0;
                     }
 
-
-
-
-                    //echo $post_date . ' -- ' . $media['taken_at_timestamp'] . ' -- ' . $i . '-- <br>';
                     $post_comments = $media['edge_media_to_comment']['count'];
 
                     $months = array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
@@ -140,23 +109,6 @@ class Analytics extends CI_Controller
                     }
 
                     $newMonthArray[] = $month_data;
-
-                   /* $year = array();
-                    $year_data = array();
-                    $current_year = date('Y');
-                    $max_year = $current_year + 10;
-                    for ($c = 2010; $c <= $max_year; $c++) {
-                        $year[$c] = $c;
-                        if ($year[$c] == $given_year) {
-                            $year_data = array(
-                                'year' => $given_year,
-                                'likes' => $post_likes,
-                                'views' => $post_views,
-                                'comments' => $post_comments,
-                            );
-                        }
-                    }
-                    $newYearArray[] = $year_data;*/
                 }
             }
 
@@ -220,23 +172,7 @@ class Analytics extends CI_Controller
                     }
                 }
             }
-
-           /* $year_data = array();
-            foreach ($newYearArray as $vals) {
-                if (array_key_exists($vals['year'], $year_data)) {
-                    $year_data[$vals['year']]['likes'] += $vals['likes'];
-                    $year_data[$vals['year']]['views'] += $vals['views'];
-                    $year_data[$vals['year']]['comments'] += $vals['comments'];
-                    $year_data[$vals['year']]['year'] = $vals['year'];
-                } else {
-                    $year_data[$vals['year']] = $vals;
-                }
-            }*/
         }
-
-
-        //echo '<pre>'; print_r($month_data); echo '</pre>'; exit;
-
 
         $search_account_post = $this->input->post('instagram_name');
         $acc_search_data = $this->common_model->get_table_data('tbl_acc_search', '*', array('user_id' => $user_id, 'account_searched' => $search_account_post));
@@ -276,9 +212,6 @@ class Analytics extends CI_Controller
             'avg_comments' => $total_count_comments / $data['total_posts'],
         );
 
-        //echo $total_count_likes . ' and ' . $total_count_comments;
-        // exit;
-
         uksort($month_data, function ($a1, $a2) {
             $time1 = strtotime($a1);
             $time2 = strtotime($a2);
@@ -299,8 +232,6 @@ class Analytics extends CI_Controller
 
 
         $data['month_analytics'] = $month_data;
-        //$data['month_analytics_all_acc'] = $month_data;
-//        $data['year_analytics'] = $year_data;
         $data['searched_account'] = $this->input->post('instagram_name');
 
         $this->load->view('common/header');

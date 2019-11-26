@@ -124,53 +124,12 @@
 <body class="" id="">
 <!--<body class="page_loader" id="dashboard_body">-->
 
+    <div class="loader" id="spinner" style="display:block  ">
+        <canvas width="480px" height="480px" id="loader"></canvas>
+        <h1>Loading</h1>
+    </div>
 
-<div class="loader" id="spinner" style="display:block  ">
-    <canvas width="480px" height="480px" id="loader"></canvas>
-    <h1>Loading</h1>
-</div>
-
-<!--
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<div id='loading'></div>
-<script>
-/*This makes the timeout variable global so all functions can access it.*/
-var timeout;
-
-/*This is an example function and can be disreguarded
-This function sets the loading div to a given string.*/
-function loaded() {
-$('#loading').html('The Ajax Call Data');
-}
-
-function startLoad() {
-/*This is the loading gif, It will popup as soon as startLoad is called*/
-$('#loading').html('<img src="http://rpg.drivethrustuff.com/shared_images/ajax-loader.gif"/>');
-/*
-This is an example of the ajax get method,
-You would retrieve the html then use the results
-to populate the container.
-
-$.get('example.php', function (results) {
-$('#loading').html(results);
-});
-*/
-/*This is an example and can be disreguarded
-The clearTimeout makes sure you don't overload the timeout variable
-with multiple timout sessions.*/
-clearTimeout(timeout);
-/*Set timeout delays a given function for given miliseconds*/
-timeout = setTimeout(loaded, 5000);
-}
-/*This binds a click event to the refresh button*/
-/*This starts the load on page load, so you don't have to click the button*/
-startLoad();
-</script>
--->
-
-
-
-<?php if ($this->session->userdata('welcome_message') == 1) { ?>
+    <?php if ($this->session->userdata('welcome_message') == 1) { ?>
     <div id="announcement" class="announcement-modal">
 
         <div class="background-overlay"></div>
@@ -181,77 +140,36 @@ startLoad();
 
             <div class="tab">
                 <div class="announcement-box">
-<span class="vue-trans">
-<div>
-<div class="image-demonstration">
-<div class="img"
-     style="background: url(<?php echo base_url(); ?>assets/img/gainer-sign-in-logo.png); width: 100%; height: 100%"></div>
-</div>
-<div class="text-demonstration">
-<h3>Welcome to Social Media Gainer</h3>
-<p>Let's go through a quick tour to explain you how everything is works!</p>
-</div>
-</div>
-</span>
+                    <span class="vue-trans">
+                        <div>
+                            <div class="image-demonstration">
+                            <div class="img"
+                                style="background: url(<?php echo base_url(); ?>assets/img/gainer-sign-in-logo.png); width: 100%; height: 100%"></div>
+                            </div>
+                            <div class="text-demonstration">
+                                <h3>Welcome to Social Media Gainer</h3>
+                                <p>Let's go through a quick tour to explain you how everything is works!</p>
+                            </div>
+                        </div>
+                    </span>
                 </div>
             </div><!--/ tab -->
 
 
             <div class="tab">
                 <div class="announcement-box">
-<span class="vue-trans">
-<div>
-<div class="image-demonstration">
-<div class="img"
-     style="background: url(<?php echo base_url(); ?>assets/img/side_panel.png); width: 100%; height: 100%"></div>
-</div>
-<div class="text-demonstration">
-<h3>Use Our Side Panel!</h3>
-<p>Click the side button icons to access our website</p>
-</div>
-</div>
-</span>
-                </div>
-            </div><!--/ tab -->
-
-
-            <div class="tab">
-
-                <div class="announcement-box">
-
-<span class="vue-trans">
-<div>
-<div class="image-demonstration">
-<div class="img"
-     style="background: url(<?php echo base_url(); ?>assets/img/socialmedia-1.png); width: 305px; background-size:305px 200px !important"></div>
-</div>
-<div class="text-demonstration">
-<h3>Instagram Packages</h3>
-<p>Start skyrocketing your accounts to new potentials. </p>
-</div>
-</div>
-</span>
-
-                </div>
-
-            </div><!--/ tab -->
-
-            <div class="tab">
-                <div class="announcement-box">
-
-<span class="vue-trans">
-<div>
-<div class="image-demonstration">
-<div class="img"
-     style="background: url(<?php echo base_url(); ?>assets/img/user_settings.png); width: 305px;"></div>
-</div>
-<div class="text-demonstration">
-<h3>Access your user settings</h3>
-<p>Here you can manage your settings, where you can Manage Your Account, View Past Orders, read F.A.Q’s, and access the Referral Section.</p>
-</div>
-</div>
-</span>
-
+                    <span class="vue-trans">
+                        <div>
+                            <div class="image-demonstration">
+                                <div class="img"
+                                    style="background: url(<?php echo base_url(); ?>assets/img/side_panel.png); width: 100%; height: 100%"></div>
+                                </div>
+                                <div class="text-demonstration">
+                                    <h3>Use Our Side Panel!</h3>
+                                    <p>Click the side button icons to access our website</p>
+                                </div>
+                         </div>
+                    </span>
                 </div>
             </div><!--/ tab -->
 
@@ -260,17 +178,57 @@ startLoad();
 
                 <div class="announcement-box">
 
-<span class="vue-trans">
-<div>
-<div class="image-demonstration">
-<div class="img" style="background: url(<?php echo base_url(); ?>assets/img/referral.png);"></div>
-</div>
-<div class="text-demonstration">
-<h3>Referral Section</h3>
-<p>Start earning money by recruiting people to the website with your unique referral ID, $$ </p>
-</div>
-</div>
-</span>
+                    <span class="vue-trans">
+                        <div>
+                        <div class="image-demonstration">
+                        <div class="img"
+                            style="background: url(<?php echo base_url(); ?>assets/img/socialmedia-1.png); width: 305px; background-size:305px 200px !important"></div>
+                        </div>
+                        <div class="text-demonstration">
+                        <h3>Instagram Packages</h3>
+                        <p>Start skyrocketing your accounts to new potentials. </p>
+                        </div>
+                        </div>
+                    </span>
+
+                </div>
+
+            </div><!--/ tab -->
+
+            <div class="tab">
+                <div class="announcement-box">
+
+                    <span class="vue-trans">
+                        <div>
+                        <div class="image-demonstration">
+                        <div class="img"
+                            style="background: url(<?php echo base_url(); ?>assets/img/user_settings.png); width: 305px;"></div>
+                        </div>
+                        <div class="text-demonstration">
+                        <h3>Access your user settings</h3>
+                        <p>Here you can manage your settings, where you can Manage Your Account, View Past Orders, read F.A.Q’s, and access the Referral Section.</p>
+                        </div>
+                        </div>
+                    </span>
+                </div>
+            </div><!--/ tab -->
+
+
+            <div class="tab">
+
+                <div class="announcement-box">
+
+                    <span class="vue-trans">
+                        <div>
+                        <div class="image-demonstration">
+                        <div class="img" style="background: url(<?php echo base_url(); ?>assets/img/referral.png);"></div>
+                        </div>
+                        <div class="text-demonstration">
+                        <h3>Referral Section</h3>
+                        <p>Start earning money by recruiting people to the website with your unique referral ID, $$ </p>
+                        </div>
+                        </div>
+                    </span>
 
                 </div>
             </div><!--/ tab -->
@@ -278,14 +236,9 @@ startLoad();
             <div style="overflow:auto;">
 
                 <button class="announcement-button back"
-                        style="z-index: 1000000; position: relative;font-family: 'Roboto', sans-serif; background: #3d4155; border-radius: 0px 0px 0px 5px;
-
- " type="button"
-                        announcement-button
-
-                        id="preBtn" onclick="Prevbtn(1)">Back
+                    style="z-index: 1000000; position: relative;font-family: 'Roboto', sans-serif; background: #3d4155; border-radius: 0px 0px 0px 5px;" type="button"
+                        announcement-button id="preBtn" onclick="Prevbtn(1)">Back
                 </button>
-
 
                 <button class="announcement-button"
                         style="font-family: 'Roboto', sans-serif;z-index: 1000000; position: relative; border-radius: 0px 0px 5px 0px; "
@@ -293,7 +246,6 @@ startLoad();
                         announcement-button
                         id="nextBtn" onclick="nextPrev(1)">Next
                 </button>
-
 
             </div><!--/ btn container -->
 
@@ -314,12 +266,10 @@ startLoad();
         showTab(currentTab); // Display the current tab
 
         function showTab(n) {
-// This function will display the specified tab of the form ...
+            // This function will display the specified tab of the form ...
             var x = document.getElementsByClassName("tab");
 
-//alert(n);
             x[n].style.display = "block";
-// ... and fix the Previous/Next buttons:
             if (n == 5) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
                 document.getElementById("nextBtn").innerHTML = "Submit";
@@ -329,65 +279,63 @@ startLoad();
                 document.getElementsByClassName("step")[currentTab].className += " finish";
                 document.getElementById("nextBtn").innerHTML = "Next";
             }
-// ... and run a function that displays the correct step indicator:
-// fixStepIndicator(n)
         }
 
         function nextPrev(n) {
-// This function will figure out which tab to display
+        // This function will figure out which tab to display
             var x = document.getElementsByClassName("tab");
-// Exit the function if any field in the current tab is invalid:
+        // Exit the function if any field in the current tab is invalid:
             if (n == 1 && !validateForm()) return false;
-// Hide the current tab:
+        // Hide the current tab:
             x[currentTab].style.display = "none";
-// Increase or decrease the current tab by 1:
+        // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
-// if you have reached the end of the form... :
+        // if you have reached the end of the form... :
             if (currentTab >= 5) {
-//...the form gets submitted:
-//document.getElementById("regForm").submit();
+        //...the form gets submitted:
+        //document.getElementById("regForm").submit();
                 $('#announcement').hide();
                 return false;
             }
-// Otherwise, display the correct tab:
+        // Otherwise, display the correct tab:
             showTab(currentTab);
         }
 
         function Prevbtn(n) {
             if (currentTab >= 1) {
                 var x = document.getElementsByClassName("tab");
-// Exit the function if any field in the current tab is invalid:
-// if (n == 1 && !validateForm()) return false;
-// Hide the current tab:
+        // Exit the function if any field in the current tab is invalid:
+        // if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
                 x[currentTab].style.display = "none";
                 currentTab = currentTab - n;
-//...the form gets submitted:
+        //...the form gets submitted:
             } else {
-//currentTab = 0;
+        //currentTab = 0;
                 return false;
             }
-// Otherwise, display the correct tab:
+        // Otherwise, display the correct tab:
             showTab(currentTab);
         }
 
         function validateForm() {
-// This function deals with validation of the form fields
+        // This function deals with validation of the form fields
             var x, y, i, valid = true;
             x = document.getElementsByClassName("tab");
             y = x[currentTab].getElementsByTagName("input");
-// A loop that checks every input field in the current tab:
+        // A loop that checks every input field in the current tab:
             for (i = 0; i < y.length; i++) {
-// If a field is empty...
+        // If a field is empty...
                 if (y[i].value == "") {
-// add an "invalid" class to the field:
+        // add an "invalid" class to the field:
                     y[i].className += " invalid";
-// and set the current valid status to false:
+        // and set the current valid status to false:
                     valid = false;
                 }
             }
-// If the valid status is true, mark the step as finished and valid:
+        // If the valid status is true, mark the step as finished and valid:
 
-//alert(currentTab);
+        //alert(currentTab);
             var tt = document.getElementsByClassName("step");
 
             document.getElementsByClassName("step")[currentTab].className += " finish";
@@ -395,16 +343,6 @@ startLoad();
             return valid; // return the valid status
         }
 
-        /*
-        function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace(" active", "");
-        }
-        //... and adds the "active" class to the current step:
-        x[n].className += " active";
-        }*/
     </script>
 <?php }
 $this->session->unset_userdata('welcome_message') ?>
@@ -429,13 +367,10 @@ $this->session->unset_userdata('welcome_message') ?>
             <?php } ?>
             <div id="dashboard_data">
 
-
             </div>
 
-    </div>
-
-
-    </main>
+            </div>
+        </main>
 
 </div>
 
@@ -576,8 +511,7 @@ $this->session->unset_userdata('welcome_message') ?>
         $.get('<?php echo base_url();?>dashboard/get_dashboard_data', function (data) {
             $('#dashboard_data').html(data);
 //hide the loader
-// $('#dashboard_content').css('display', 'block');
-// $('#dashboard_body').removeClass('page_loader');
+
             $('#spinner').fadeOut('');
             $('#loader').hide();
 //build DataTable

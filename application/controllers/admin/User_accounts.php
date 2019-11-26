@@ -85,8 +85,6 @@ class User_Accounts extends CI_Controller {
         $followers = $this->input->post('followers');
         $special_id = $this->input->post('special_order_id');
 
-
-
         if(!empty($package_id) && !empty($price)){
 
             if($package_id == 1 && empty($likes) || empty($views)) {
@@ -105,8 +103,6 @@ class User_Accounts extends CI_Controller {
                 $this->session->set_flashdata('error_message', 'All fields are required');
                 redirect('admin/instagram_packages');
             } else {
-
-
                 $data = array(
                     'package_likes' => $this->input->post('likes'),
                     'package_views' => $this->input->post('views'),
@@ -117,7 +113,6 @@ class User_Accounts extends CI_Controller {
                     'package_updated_date' => date('Y-m-d H:i:s')
                 );
                 $this->common_model->update_table('tbl_packages', $data, array('package_id' => $package_id));
-                //echo '<pre>'; print_r($data); echo '</pre>'; exit;
                 $this->session->set_flashdata('success_message', 'Package Updated Successfully');
                 redirect('admin/instagram_packages');
             }

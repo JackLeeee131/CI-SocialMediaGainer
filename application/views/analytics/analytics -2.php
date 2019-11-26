@@ -1,36 +1,22 @@
 
-<style>
-
-
-    #graph,
-    #graph2,
-    #graph3{
-        min-height: 250px;
-    }
-    #graph3 svg {
-        height: 262px;
-    }
-
-
-</style>
+    <style>
+        #graph,
+        #graph2,
+        #graph3{
+            min-height: 250px;
+        }
+        #graph3 svg {
+            height: 262px;
+        }
+    </style>
 <body>
-
-
-
-
-
-
-
-
 
 <div class="container-fluid">
     <div class="row">
 
-
         <main role="main" class="right-section">
 
             <h1 class="heading">Analytics</h1>
-
 
             <section class="row text-center placeholders">
 
@@ -38,7 +24,6 @@
                 <div class="form-row">
                     <div class="col-lg-12 col-sm-3">
                         <div class="btn-group pull-left" role="group" aria-label="...">
-
                                     <select class="custom-select mr-sm-8" id="inlineFormCustomSelect" onchange="get_month_data($('.btn-default.active').attr('id'), this.value)">
                                         <option value="" selected>All Instagram Accounts</option>
 
@@ -53,8 +38,6 @@
                                     </select>
                         </div>
 
-
-
                         <div class="btn-group pull-right" role="group" aria-label="...">
                             <button id="all" type="button" class="btn btn-default active" onclick="get_month_data('all', $('#inlineFormCustomSelect').val())">All Engagements</button>
                             <button id="likes" type="button" class="btn btn-default" onclick="get_month_data('likes', $('#inlineFormCustomSelect').val())">Likes</button>
@@ -62,9 +45,6 @@
                             <button id="comments" class="btn btn-default" onclick="get_month_data('comments', $('#inlineFormCustomSelect').val())">Comments</button>
                             <button id="followers" class="btn btn-default" onclick="get_month_data('followers', $('#inlineFormCustomSelect').val())">Followers</button>
                         </div>
-
-
-
 
                     </div>
                 </div>
@@ -125,9 +105,7 @@
                               data: {type: type, order_id:order_id},
                               success: function(response) {
 
-
                                   if (type == "all") {
-
 
                                       if(order_id == "") {
 
@@ -227,10 +205,6 @@
                                           }
                                       });
 
-
-
-                                        // Graph2 is a month Bar Chart
-
                                       Morris.Bar({
                                           element: 'graph2',
                                           data: response,
@@ -245,13 +219,6 @@
                               }
                           });
                       }
-
-
-
-
-
-
-
 
                       function get_account_data(order_id) {
 
@@ -327,9 +294,6 @@
                                               return month;
                                           }
                                       });
-
-
-
                                       // Graph2 is a month Bar Chart
 
                                       Morris.Bar({
@@ -432,10 +396,10 @@
 
 
     <script>
-    $('body').on('click', 'button', function() {
-    $('button.active').removeClass('active');
-    $(this).addClass('active');
-    });
+        $('body').on('click', 'button', function() {
+        $('button.active').removeClass('active');
+        $(this).addClass('active');
+        });
     </script>
 
 

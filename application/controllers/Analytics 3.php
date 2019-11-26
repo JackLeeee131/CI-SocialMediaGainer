@@ -3,14 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Analytics extends CI_Controller
 {
-
-
     function __construct()
     {
         parent::__construct();
-
     }
-
 
     public function index() {
         is_user_in();
@@ -22,10 +18,7 @@ class Analytics extends CI_Controller
         $this->load->view('common/footer');
     }
 
-
     public function search_account() {
-
-
         is_user_in();
         $user_id = $this->session->userdata('user_id');
 
@@ -36,38 +29,24 @@ class Analytics extends CI_Controller
         } else{
             $search_account = $this->input->post('searched_account');
         }
-
-
         require 'vendor/autoload.php';
         $instagram_api = new \InstagramScraper\Instagram();
         $account = $instagram_api->getAccount($search_account);
-
-
-
         $is_private = 0;
         if(empty($search_type) && empty($account['error'])) {
             $is_private = $account->isPrivate();
         }
-
         if (empty($search_type) && !empty($account['error']) || $is_private == 1) {
-
             if(!empty($account['error'])) {
                 $this->session->set_flashdata('error_message', 'Account with this username does not exist');
                 redirect('analytics');
             }
-
             if(empty($account['error']) && $is_private == 1) {
                 $this->session->set_flashdata('error_message', 'This Account is Private. <br> Please change your account status to use this resource.');
                 redirect('analytics');
             }
 
         } else {
-
-
-
-            //echo '<pre>'; print_r($account); echo '</pre>'; exit;
-
-
             $data['total_posts'] = $account->getMediaCount();
             $data['profile_pic'] = $account->getProfilePicUrl();
             $data['total_followesr'] = $account->getFollowsCount();
@@ -87,10 +66,6 @@ class Analytics extends CI_Controller
             for ($i = 0; $i <= $counter; $i++) {
                 if (!empty($medias[$i])) {
                     $media = $medias[$i];
-
-
-                    //echo '<pre>'; print_r($media); echo '</pre>'; exit;
-
                     $postCode = $media['shortcode'];
                     $post_date = gmdate("Y-m-d H:i:s", $media['taken_at_timestamp']);
 
@@ -141,13 +116,6 @@ class Analytics extends CI_Controller
                                     'comments' => $post_comments,
                                 );
                             }
-
-
-
-
-
-
-
                         }
                     }
                     $newMonthArray[] = $month_data;
@@ -245,27 +213,6 @@ class Analytics extends CI_Controller
                 }
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             $year_data = array();
             foreach ($newYearArray as $vals) {
                 if (array_key_exists($vals['year'], $year_data)) {
@@ -295,9 +242,6 @@ class Analytics extends CI_Controller
 
         }
 
-
-
-
         $data['month_analytics'] = $month_data;
         //$data['month_analytics_all_acc'] = $month_data;
         $data['year_analytics'] = $year_data;
@@ -310,39 +254,25 @@ class Analytics extends CI_Controller
         $this->load->view('analytics/view_search_account', $data);
         $this->load->view('common/footer');
 
-
     }
 
-
-
-
-
-
-
-
     public function get_month_data() {
-
 
         $type = $this->input->post('type');
         $order_id = $this->input->post('order_id');
         $user_id = $this->session->userdata('user_id');
         $custom_orders = $this->common_model->custom_orders_analytics();
 
-
         $months = array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
         $month_data = array();
         foreach ($custom_orders as $custom) {
-
             $given_month = date('M', strtotime($custom['given_date']));
             $given_year = date('Y', strtotime($custom['given_date']));
 
             for ($i = 0; $i <= 10; $i++) {
                 if ($months[$i] == $given_month && date('Y') == $given_year) {
-
                     $given_date = date('Y-m', strtotime($custom['given_date']));
-
                     if (empty($order_id)) {
-
                         $count_likes = $this->db->query("SELECT SUM(given_likes) as total_likes, count(*) as total_posts FROM tbl_custompackage_status WHERE given_date LIKE '%$given_date%' AND user_id = '$user_id' AND given_likes != ''")->result_array();
                         $total_likes = $count_likes[0]['total_likes'];
                         $total_likes_posts = $count_likes[0]['total_posts'];
@@ -470,29 +400,18 @@ class Analytics extends CI_Controller
                             'followers' => $total_followers + $total_followers_pkg
                         );
                     }
-
-
                 }
-
             }
-
         }
-
-
 
         $month_analytics = array();
         foreach ($month_data as $key => $value) {
             $month_analytics[] = $value;
         }
 
-
-       // echo '<pre>'; print_r($month_data); echo '</pre><br><bR>';
-
         echo json_encode($month_analytics);
 
         exit;
-
-
 
         if (count($month_analytics) == 0) {
             echo '[{"month":2018-02","total":713,"avg":"237.67"}]';
@@ -501,6 +420,5 @@ class Analytics extends CI_Controller
 
         }
     }
-
 
 }
